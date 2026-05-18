@@ -1,0 +1,252 @@
+/* ============================================
+   GLOBAL.CSS — Reset, Variables, Tipografía, Base
+   ============================================ */
+
+/* ----- Custom Properties / Variables ----- */
+:root {
+  /* Colores primarios */
+  --color-bg-dark: #0a0e17;
+  --color-bg-section: #0f1520;
+  --color-bg-card: #151c2c;
+  --color-bg-card-hover: #1a2438;
+  --color-surface: #1c2539;
+  
+  /* Acentos */
+  --color-amber: #f59e0b;
+  --color-amber-light: #fbbf24;
+  --color-amber-glow: rgba(245, 158, 11, 0.15);
+  --color-teal: #14b8a6;
+  --color-teal-light: #2dd4bf;
+  --color-teal-glow: rgba(20, 184, 166, 0.15);
+  --color-green: #22c55e;
+  --color-green-glow: rgba(34, 197, 94, 0.15);
+  --color-red: #ef4444;
+  --color-red-glow: rgba(239, 68, 68, 0.15);
+  --color-purple: #a855f7;
+  --color-purple-glow: rgba(168, 85, 247, 0.15);
+  --color-blue: #3b82f6;
+  --color-blue-glow: rgba(59, 130, 246, 0.15);
+  
+  /* Texto */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  
+  /* Bordes */
+  --color-border: rgba(148, 163, 184, 0.1);
+  --color-border-hover: rgba(148, 163, 184, 0.25);
+  
+  /* Gradientes */
+  --gradient-amber: linear-gradient(135deg, #f59e0b, #d97706);
+  --gradient-teal: linear-gradient(135deg, #14b8a6, #0d9488);
+  --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(10, 14, 23, 0.6) 50%, #0a0e17 100%);
+  
+  /* Tipografía */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  
+  /* Espaciado */
+  --section-padding: 100px 0;
+  --container-max: 1200px;
+  --container-padding: 0 24px;
+  
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  
+  /* Sombras */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow-amber: 0 0 30px rgba(245, 158, 11, 0.2);
+  --shadow-glow-teal: 0 0 30px rgba(20, 184, 166, 0.2);
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ----- Reset ----- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ----- Tipografía global ----- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
+h4 { font-size: 1.15rem; }
+
+p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+a {
+  color: var(--color-amber);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-amber-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ----- Contenedor ----- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* ----- Utilidades ----- */
+.text-gradient-amber {
+  background: var(--gradient-amber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-teal {
+  background: var(--gradient-teal);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.badge--amber {
+  background: var(--color-amber-glow);
+  color: var(--color-amber);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.badge--teal {
+  background: var(--color-teal-glow);
+  color: var(--color-teal);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+}
+
+.badge--green {
+  background: var(--color-green-glow);
+  color: var(--color-green);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.badge--purple {
+  background: var(--color-purple-glow);
+  color: var(--color-purple);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+.badge--blue {
+  background: var(--color-blue-glow);
+  color: var(--color-blue);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.badge--red {
+  background: var(--color-red-glow);
+  color: var(--color-red);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Divider decorativo */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-amber);
+  border-radius: 2px;
+  margin: 16px 0 24px;
+}
+
+.section-divider--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Icono circular */
+.icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Selection */
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: var(--color-text-primary);
+}

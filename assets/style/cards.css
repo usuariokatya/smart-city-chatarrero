@@ -1,0 +1,129 @@
+/* ============================================
+   CARDS.CSS — Tarjetas de contenido
+   ============================================ */
+
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 32px;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-amber);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.card:hover {
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.card__icon--amber { background: var(--color-amber-glow); }
+.card__icon--teal { background: var(--color-teal-glow); }
+.card__icon--green { background: var(--color-green-glow); }
+.card__icon--purple { background: var(--color-purple-glow); }
+.card__icon--blue { background: var(--color-blue-glow); }
+.card__icon--red { background: var(--color-red-glow); }
+
+.card__title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.card__text {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.card__text ul {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__text ul li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.card__text ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-amber);
+}
+
+/* Card con teal top */
+.card--teal::before {
+  background: var(--gradient-teal);
+}
+
+/* Card con green top */
+.card--green::before {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* Card con purple top */
+.card--purple::before {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+
+/* Card grande / feature */
+.card--feature {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.card--feature .card__icon {
+  margin-bottom: 0;
+}
+
+/* Card con imagen */
+.card--image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card--image .card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card--image .card__body {
+  padding: 28px;
+}

@@ -1,0 +1,70 @@
+/* ============================================
+   TABLES.CSS — Tablas de datos / ODS
+   ============================================ */
+
+.data-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.data-table thead {
+  background: var(--color-surface);
+}
+
+.data-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table td {
+  padding: 16px 20px;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.data-table tbody tr:hover {
+  background: rgba(245, 158, 11, 0.04);
+}
+
+.data-table td:first-child {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* ODS Table special */
+.ods-table td .badge {
+  white-space: nowrap;
+}
+
+.ods-table .ods-number {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--color-amber);
+  min-width: 40px;
+  text-align: center;
+}
