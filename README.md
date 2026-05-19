@@ -5,7 +5,7 @@
 * **Población:** 1 millón de personas. Al principio la población era mucho mayor, pero por las guerras la gente no podía conseguir recursos básicos ni tener una vida digna. Muchos se fueron a otros lugares. Cuando la ciudad se recupere y todo mejore, más personas podrán volver a vivir aquí en buenas condiciones. (Explicación: Adrián)
 * **Problema principal:** Contaminación por la guerra. Hubo una guerra hace mucho tiempo entre China y Bután. Dejaron muchos restos de armas y bombas, lo que hace muy difícil vivir en la zona por la contaminación de los desechos. (Historia: Adrián)
 
-## A. Medio ambiente (Asier y Carlos)
+## A. Medio ambiente (Asier y Fran)
 * **Energía:** Sistema mixto con paso a energías renovables (limpias).
 * **Movilidad:** Transporte público eléctrico y carriles para bicicletas.
 * **Gestión del agua:** Tratamiento y limpieza del agua.

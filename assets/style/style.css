@@ -266,7 +266,7 @@ ul, ol {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0;
+  padding: 10px 0;
   transition: background var(--transition-normal), 
               box-shadow var(--transition-normal),
               padding var(--transition-normal);
@@ -277,7 +277,7 @@ ul, ol {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 var(--color-border);
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .site-header .container {
@@ -290,10 +290,10 @@ ul, ol {
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--color-text-primary);
   text-decoration: none;
 }
@@ -303,14 +303,14 @@ ul, ol {
 }
 
 .header-logo__icon {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background: var(--gradient-amber);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   box-shadow: var(--shadow-glow-amber);
 }
 
@@ -322,7 +322,7 @@ ul, ol {
 }
 
 .header-nav__link {
-  padding: 8px 18px;
+  padding: 6px 12px;
   border-radius: var(--radius-sm);
   font-size: 0.9rem;
   font-weight: 500;
@@ -496,9 +496,8 @@ ul, ol {
 /* Scroll indicator */
 .hero__scroll {
   position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 40px;
+  right: 60px;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -575,8 +574,8 @@ ul, ol {
 
 .problem-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
   align-items: center;
 }
 
@@ -584,11 +583,17 @@ ul, ol {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
 }
 
 .problem-visual img {
   border-radius: var(--radius-lg);
   transition: transform var(--transition-slow);
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .problem-visual:hover img {
@@ -1061,8 +1066,8 @@ ul, ol {
 
 /* Scroll bounce del indicador */
 @keyframes scroll-bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
 }
 
 /* Fade in desde abajo */
